@@ -1,0 +1,27 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "prettier"],
+    "extends": [
+        // "plugin:node/recommended",
+        "eslint:recommended",
+        "plugin:node/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        // "jest/globals": true
+    },
+    "rules": {
+        "no-unused-vars": "warn",
+        "node/no-unsupported-features/es-syntax": ["warn", {
+            "version": ">=8.0.0",
+            "ignores": []
+        }],
+        "node/no-missing-import": ["warn", {
+            "allowModules": [],
+            "resolvePaths": ["/path/to/a/modules/directory"],
+            "tryExtensions": [".js", ".json", ".node"]
+        }]
+    }
+}
