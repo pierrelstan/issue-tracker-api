@@ -1,28 +1,21 @@
-{
-    "root": true,
+ {
     "parser": "@typescript-eslint/parser",
-    "plugins": [ "prettier"],
-    "extends": [
-        // "plugin:node/recommended",
-        "eslint:recommended",
-        "plugin:node/recommended"
-    ],
+    "extends": [],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+    },
     "env": {
-        "browser": true,
-        "node": true,
-        // "jest/globals": true
+      "es6": true,
+      "node": true,
     },
     "rules": {
-        "no-unused-vars": "warn",
-        "node/no-unsupported-features/es-syntax": [
-            "warn",
-            { ignores: ["modules"] },
-          ],
-        "node/no-missing-import": ["warn", {
-            "allowModules": [],
-            "resolvePaths": ["/path/to/a/modules/directory"],
-            "tryExtensions": [".js", ".json", ".node"]
-        }],
-
+      "no-var": "warn",
+      "semi": "warn",
+      "indent": ["warn", 2, { "SwitchCase": 1 }],
+      "no-multi-spaces": "warn",
+      "space-in-parens": "warn",
+      "no-multiple-empty-lines": "warn",
+      "prefer-const": "warn",
     }
-}
+  }
