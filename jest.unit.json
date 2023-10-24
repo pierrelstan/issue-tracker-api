@@ -1,7 +1,10 @@
 {
   "preset": "ts-jest",
   "coverageDirectory": "./coverage",
-  "testMatch": ["**/?(*.)+(spec).ts", "**/?(*.)+(test).ts"],
+  "testMatch": ["**/?(*.)+(test).ts"],
+  "testPathIgnorePatterns" : [
+    "/history/"
+  ],
   "resetMocks": true,
   "clearMocks": true
 }
